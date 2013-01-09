@@ -1,5 +1,4 @@
 """Standard 52 card deckmaker and BlackJack deck preparer""" 
-# from sys import exit
 
 class Deck(object):
     """ Contains all deck creation and value giving methods """
@@ -19,7 +18,7 @@ class Deck(object):
         return card_deck
 
     def bj_valuer(self):
-        """ Returns dict with BJ values for each card, Aces value = 'A' """
+        """ Returns dict with BJ values for each card, Aces value = 1 """
         deck = self.deck_builder()
         bj_deck = {}
         value = 0
@@ -33,7 +32,3 @@ class Deck(object):
                     value = 10
             bj_deck[card] = value
         return bj_deck
-
-# testsession = Deck()
-# testsession.bj_valuer()
-
