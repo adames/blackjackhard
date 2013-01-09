@@ -1,5 +1,4 @@
 """ This is BlackJackHard"""
-## FIGURE OUT HOW TO MAKE MY DECK SAVE AND REFRESH IN CARD MOVER
 
 import deck
 from sys import exit
@@ -329,9 +328,8 @@ class Cardmover(DeckClass):
         self.AD_EDITABLE_DECK = self.AD_ORIGINAL_DECK.copy()
 
     def card_dealing(self, quantity):
-        if len(self.AD_EDITABLE_DECK) == 26:
+        if len(self.AD_EDITABLE_DECK) <= 26:
             self.card_shuffler()
-            print "The dealer is shuffling the cards..."
         return self.card_mover(quantity)
 
 
@@ -347,8 +345,8 @@ class Cardmover(DeckClass):
         return hand_list
 
     def card_shuffler(self):
+        print "The dealer is shuffling the cards..."
         self.AD_EDITABLE_DECK = self.AD_ORIGINAL_DECK.copy()
-        print len(self.AD_EDITABLE_DECK)
 
     def card_picker(self):
         """ Selects random card from deck dict """
