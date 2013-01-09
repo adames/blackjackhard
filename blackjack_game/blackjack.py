@@ -225,17 +225,17 @@ class Narration(object):
     def compare(self, comparison_amounts):
         print self.COMPARE % (comparison_amounts)
 
-    def narrator(self, command, start_list):
+    def narrator(self, command, command_parameter):
         """ Game narration that is chosen with command parameter """
 
         if command == "PLAYER_FIRST_DEAL":
-            return self.player_first_deal(start_list)
+            return self.player_first_deal(command_parameter)
         elif command == "DEALER_FIRST_DEAL": 
-            return self.dealer_first_deal(start_list)
+            return self.dealer_first_deal(command_parameter)
         elif command == "PLAYER_HIT":
-            return self.player_hit(start_list)
+            return self.player_hit(command_parameter)
         elif command == "DEALER_HIT":
-            return self.dealer_hit(start_list)
+            return self.dealer_hit(command_parameter)
         elif command == "PLAYER_STAND":
             print self.PLAYER_STAND
         elif command == "PLAYER_BUST":
@@ -254,7 +254,7 @@ class Narration(object):
             print self.DEALER_WINS
             return 'L'
         elif command == 'COMPARE':
-            self.compare(start_list)
+            self.compare(command_parameter)
         elif command == 'PUSH':
             print self.PUSH
             return 'P'
