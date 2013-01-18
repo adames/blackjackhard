@@ -1,5 +1,5 @@
 from nose.tools import *
-import NAME
+import blackjackHARD
 
 def setup():
     print "SETUP!"
