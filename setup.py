@@ -11,7 +11,7 @@ config = {
         'version': '0.1',
         'install_requires': ['nose'],
         'packages': ['blackjackHARD'],
-        'scripts': [],
+        'scripts': ['bin/newscript.py'],
         'name': 'blackjackHARD'
 }
 
